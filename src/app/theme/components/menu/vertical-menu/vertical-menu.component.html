@@ -1,0 +1,6 @@
+<div *ngFor="let menu of parentMenu" class="menu-item">
+  <a *ngIf="menu.routerLink && !menu.hasSubMenu" mat-button
+     fxLayout="row" [fxLayoutAlign]="(settings.menuType=='default') ? 'start center' :'center center'"
+     [routerLink]="[menu.routerLink]" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+      [matTooltip]="menu.title"></a>
+</div>
